@@ -12,7 +12,7 @@ let value = 0;
 do {
     lowboundint = Number(readlineSync.question("Lower bound: "));
     upboundint = Number(readlineSync.question("Upper bound: "));
-} while (lowboundint > upboundint)
+} while (lowboundint > upboundint);
 
 for (let value = 0; value <= upboundint; value++) {
   sum = sum + value;
