@@ -8,11 +8,11 @@ const MIN = Number.MIN_SAFE_INTEGER;
 let sum = 0;
 let i = lowboundint;
 
-if (lowboundint > upboundint || lowboundint < MIN || upboundint > MAX) {
+if (lowboundint > upboundint || lowboundint < MIN || upboundint > MAX || Number.isNaN(lowboundint) || Number.isInteger(lowboundint) || Number.isNaN(upboundint) || Number.isInteger(upboundint)) {
   do {
     lowboundint = Number(readlineSync.question("Lower bound: "));
     upboundint = Number(readlineSync.question("Upper bound: "));
-  } while (lowboundint > upboundint);
+  } while (lowboundint > upboundint ||  lowboundint < MIN || upboundint > MAX || Number.isNaN(lowboundint) || Number.isInteger(lowboundint) || Number.isNaN(upboundint) || Number.isInteger(upboundint));
     if (i % 2 != +0) {
       lowboundint = lowboundint + 1;
     }
