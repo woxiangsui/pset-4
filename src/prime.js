@@ -2,14 +2,14 @@ const readlineSync = require("readline-sync");
 
 const MAX = Number.MAX_SAFE_INTEGER;
 const MIN = 0;
-let integer = 0;
 let isPrime = true;
 let count = 2;
 
-console.log();
-do {
-  integer = readlineSync.question("Non-negative integer: ");
-} while (integer > MAX || integer < 0 || integer % 1 != 0 || Number.isNaN(integer) || integer == 1);
+let integer = Number(readlineSync.question("\n\nNon-negative integer: "));
+
+while (integer > MAX || integer < 0 || Number.isNaN(integer) || !Number.isInteger(integer) || integer == 1 || integer == "") {
+  integer = Number(readlineSync.question("Non-negative integer: "));
+}
 
 while (isPrime && !(count == (integer))) {
 

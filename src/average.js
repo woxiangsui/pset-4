@@ -7,7 +7,7 @@ let sum = 0;
 let average = 0;
 let integer = 0;
 let isFalse = true;
-console.log();
+console.log("\n");
 
 while (isFalse){
   integer = Number(readlineSync.question("Non-negative integer: "));
